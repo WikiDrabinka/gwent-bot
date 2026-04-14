@@ -1,3 +1,5 @@
+import random
+
 class Card():
 
     def __init__(self, **properties):
@@ -16,12 +18,27 @@ class Board():
 
     class Player():
 
-        def __init__(self, deck: list[Card]):
+        def __init__(self, deck: list[Card], hand: list[Card], played: dict[int, list[Card]] = None, cemetary: list[Card] = []):
 
+            self.hand = hand
             self.deck = deck
-            self.played = {i: [] for i in range(3)}
+            if played:
+                self.played = played
+            else: 
+                self.played = {i: [] for i in range(3)}
+            self.cemetary = cemetary
 
-    def __init__(self, players):
+        def draw_card(self):
+            
+            if len(self.deck) == 0:
+                return
+            
+            new_card = random.choice(self.deck)
+
+            self.deck.remove(new_card)
+            self.hand.append(new_card)
+
+    def __init__(self, players: list[Player]):
 
         self.players = players
         self.weather = []
@@ -38,13 +55,18 @@ class Board():
 
         return score
     
-    def remove_card(self, card: Card):
+    def remove_card(self, card: Card, dead: bool = True):
 
         for player in self.players:
             
             for row in card.rows:
 
                 player.played[row].remove(card)
+                card.modified_points = card.points
+
+                if dead:
+                    player.cemetary.append(card)
+
 
     def modify_cards(self, rows, function):
         
@@ -56,18 +78,19 @@ class Board():
 
                     card.modified_points = function(card, row = player.played[row])
 
-
-    def play_card(self, card: Card, row = None):
+    def play_card(self, card: Card, row = None, **kwargs):
 
         player = self.players[self.turn]
 
-        player.deck.remove(card)
+        player.hand.remove(card)
 
         def apply_bonuses(card, **kwargs):
 
             morale = 0
 
             bonded = 0
+
+            horn = 0
 
             for other_card in kwargs.get("row", []):
 
@@ -82,15 +105,33 @@ class Board():
                 if "morale boost" in other_card.powers:
 
                     morale += 1
+
+                if "horn" in other_card.powers:
+
+                    horn = 1
             
-            return card.modified_points * (bonded + 1) + morale  
+            return (card.modified_points * (bonded + 1) + morale) * (horn + 1)
+        
+        def apply_weather(card, **kwargs):
+
+            return 1 if "hero" not in card.powers and card.points != 0 else card.points
             
 
         if "weather" in card.powers:
 
             self.weather.append(card)
 
-            self.modify_cards(card.rows, lambda x, row: 1)
+            self.modify_cards(card.rows, apply_weather)
+        
+        elif "scorch" in card.powers:
+
+            card_candidates = [candidate for player in self.players for row in range(3) for candidate in player.played[row] if "hero" not in candidate.powers]
+
+            max_points = max([card.modified_points for card in card_candidates])
+            max_cards = [card for card in card_candidates if card.modified_points == max_points]
+
+            for removed_card in max_cards:
+                self.remove_card(removed_card)
                         
         else:
 
@@ -98,24 +139,48 @@ class Board():
 
                 row = card.rows[0]
 
-            player.played[row].append(card)
+            if "spy" in card.powers:
 
-            if "tight bond" in card.powers or "morale boost" in card.powers:
+                self.players[self.turn - 1].played[row].append(card)
+                player.draw_card()
 
-                self.modify_cards(card.rows, lambda card, row: card.points)
+            else:
 
-                blocked_rows = set([row for weather_card in self.weather for row in weather_card.rows])
+                if "muster" in card.powers:
 
-                self.modify_cards(list(blocked_rows), lambda x, row: 1)
+                    new_cards_hand = [new_card for new_card in player.hand if new_card.name == card.name]
+                    new_cards_deck = [new_card for new_card in player.deck if new_card.name == card.name]
 
+                    for new_card in new_cards_hand:
+
+                        player.played[new_card.rows[0]].append(new_card)
+                        player.hand.remove(new_card)
+
+                    for new_card in new_cards_deck:
+
+                        player.played[new_card.rows[0]].append(new_card)
+                        player.deck.remove(new_card) 
+
+                if "medic" in card.powers:
+
+                    revived_card = player.cemetary[kwargs.get("index", 0)] 
+                    player.played[revived_card.rows[0]].append(revived_card)
+                    player.cemetary.remove(revived_card)
+
+                if "decoy" in card.powers:
+
+                    replaced_card = kwargs.get("replaced_card", None)
+
+                    if replaced_card:
+                        player.hand.append(replaced_card)
+                        self.remove_card(replaced_card, False)
+                
+                player.played[row].append(card)
+
+        blocked_rows = set([row for weather_card in self.weather for row in weather_card.rows])
+        self.modify_cards(card.rows, lambda card, row: card.points)
+        self.modify_cards(list(blocked_rows), apply_weather)
         self.modify_cards(card.rows, apply_bonuses)
  
 
-        self.turn = (self.turn + 1) % len(self.players)
-        
-
-
-        
-
-
-    
+        self.turn = (self.turn + 1) % len(self.players)        
