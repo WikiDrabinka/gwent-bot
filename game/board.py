@@ -4,15 +4,21 @@ class Card():
 
     def __init__(self, **properties):
 
+        self.id = properties.get("id")
         self.name = properties.get("name")
         self.points = properties.get("points", 0)
         self.modified_points = self.points
         self.rows = properties.get("rows", [-1])
         self.powers = properties.get("powers", [])
+        self.bonded = properties.get("bonded", [])
 
     def __repr__(self):
 
         return f"Card '{self.name}'\nPoints: {self.points}, Powers: {self.powers}, Rows: {self.rows}"
+    
+    def __eq__(self, other):
+
+        return self.name == other.name and self.points == other.points and set(self.rows) == set(other.rows) and set(self.powers) == set(other.powers)
 
 class Board():
 
@@ -27,6 +33,7 @@ class Board():
             else: 
                 self.played = {i: [] for i in range(3)}
             self.cemetary = cemetary
+            self.passed = False
 
         def draw_card(self):
             
@@ -42,7 +49,6 @@ class Board():
 
         self.players = players
         self.weather = []
-        self.turn = 0
 
     def get_score(self, player_id: int):
 
@@ -78,9 +84,12 @@ class Board():
 
                     card.modified_points = function(card, row = player.played[row])
 
-    def play_card(self, card: Card, row = None, **kwargs):
+    def play_card(self, player: Player, card: Card, row = None, **kwargs):
 
-        player = self.players[self.turn]
+        if card.name == "pass":
+        
+            player.passed = True
+            return
 
         player.hand.remove(card)
 
@@ -94,11 +103,11 @@ class Board():
 
             for other_card in kwargs.get("row", []):
 
-                if card == other_card:
+                if card.id == other_card.id:
 
                     continue
 
-                if "tight bond" in card.powers and other_card.name == card.name:
+                if "tight bond" in card.powers and other_card.name in card.bonded:
 
                     bonded += 1
 
@@ -148,8 +157,8 @@ class Board():
 
                 if "muster" in card.powers:
 
-                    new_cards_hand = [new_card for new_card in player.hand if new_card.name == card.name]
-                    new_cards_deck = [new_card for new_card in player.deck if new_card.name == card.name]
+                    new_cards_hand = [new_card for new_card in player.hand if new_card.name in card.bonded]
+                    new_cards_deck = [new_card for new_card in player.deck if new_card.name in card.bonded]
 
                     for new_card in new_cards_hand:
 
@@ -163,7 +172,7 @@ class Board():
 
                 if "medic" in card.powers:
 
-                    revived_card = player.cemetary[kwargs.get("index", 0)] 
+                    revived_card = kwargs.get("revived_card", None)
                     player.played[revived_card.rows[0]].append(revived_card)
                     player.cemetary.remove(revived_card)
 
@@ -180,7 +189,4 @@ class Board():
         blocked_rows = set([row for weather_card in self.weather for row in weather_card.rows])
         self.modify_cards(card.rows, lambda card, row: card.points)
         self.modify_cards(list(blocked_rows), apply_weather)
-        self.modify_cards(card.rows, apply_bonuses)
- 
-
-        self.turn = (self.turn + 1) % len(self.players)        
+        self.modify_cards(card.rows, apply_bonuses)      
