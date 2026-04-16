@@ -13,7 +13,8 @@ This project's goal is to create a few different Reinforcement Learning Agents f
     - [ ] 3 Turn system
 - [ ] Agents
     - [x] Baseline naive algorithm
-    - [ ] Q-Learning Agent
+    - [ ] Q-Learning Agent with approximated state values
+    - [ ] DQN Agent
     - [ ] PPO Agent
 - [ ] User interface
     - [ ] Fully operable console game

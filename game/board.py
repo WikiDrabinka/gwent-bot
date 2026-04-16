@@ -10,7 +10,6 @@ class Card():
         self.modified_points = self.points
         self.rows = properties.get("rows", [-1])
         self.powers = properties.get("powers", [])
-        self.bonded = properties.get("bonded", [])
 
     def __repr__(self):
 
@@ -74,7 +73,7 @@ class Board():
                     player.cemetary.append(card)
 
 
-    def modify_cards(self, rows, function):
+    def modify_cards(self, rows: list[int], function):
         
         for player in self.players:
 
@@ -107,7 +106,7 @@ class Board():
 
                     continue
 
-                if "tight bond" in card.powers and other_card.name in card.bonded:
+                if "tight bond" in card.powers and other_card.name.split(":")[0] == card.name.split(":")[0]:
 
                     bonded += 1
 
@@ -124,6 +123,10 @@ class Board():
         def apply_weather(card, **kwargs):
 
             return 1 if "hero" not in card.powers and card.points != 0 else card.points
+        
+        def reset_points(card, **kwargs):
+
+            return card.points
             
 
         if "weather" in card.powers:
@@ -131,10 +134,18 @@ class Board():
             self.weather.append(card)
 
             self.modify_cards(card.rows, apply_weather)
+
+        elif "clear" in card.powers:
+
+            self.weather.clear()
+
+            self.modify_cards(range(3), reset_points)
         
         elif "scorch" in card.powers:
 
-            card_candidates = [candidate for player in self.players for row in range(3) for candidate in player.played[row] if "hero" not in candidate.powers]
+            rows = list(range(3)) if -1 in card.rows else card.rows
+
+            card_candidates = [candidate for player in self.players for row in rows for candidate in player.played[row] if "hero" not in candidate.powers]
 
             max_points = max([card.modified_points for card in card_candidates])
             max_cards = [card for card in card_candidates if card.modified_points == max_points]
@@ -157,8 +168,8 @@ class Board():
 
                 if "muster" in card.powers:
 
-                    new_cards_hand = [new_card for new_card in player.hand if new_card.name in card.bonded]
-                    new_cards_deck = [new_card for new_card in player.deck if new_card.name in card.bonded]
+                    new_cards_hand = [new_card for new_card in player.hand if new_card.name.split(":")[0] == card.name.split(":")[0]]
+                    new_cards_deck = [new_card for new_card in player.deck if new_card.name.split(":")[0] == card.name.split(":")[0]]
 
                     for new_card in new_cards_hand:
 
