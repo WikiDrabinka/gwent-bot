@@ -66,11 +66,12 @@ class Board():
             
             for row in card.rows:
 
-                player.played[row].remove(card)
-                card.modified_points = card.points
+                if card in player.played[row]:
+                    player.played[row].remove(card)
+                    card.modified_points = card.points
 
-                if dead:
-                    player.cemetary.append(card)
+                    if dead:
+                        player.cemetary.append(card)
 
 
     def modify_cards(self, rows: list[int], function):
@@ -83,7 +84,9 @@ class Board():
 
                     card.modified_points = function(card, row = player.played[row])
 
-    def play_card(self, player: Player, card: Card, row = None, **kwargs):
+    def play_card(self, player: Player, card: Card, **kwargs):
+
+        row = kwargs.get("row", None)
 
         if card.name == "pass":
         
@@ -138,8 +141,6 @@ class Board():
         elif "clear" in card.powers:
 
             self.weather.clear()
-
-            self.modify_cards(range(3), reset_points)
         
         elif "scorch" in card.powers:
 
@@ -155,13 +156,13 @@ class Board():
                         
         else:
 
-            if not row:
+            if row is None:
 
                 row = card.rows[0]
 
             if "spy" in card.powers:
 
-                self.players[self.turn - 1].played[row].append(card)
+                self.players[self.players.index(player) - 1].played[row].append(card)
                 player.draw_card()
 
             else:
@@ -198,6 +199,11 @@ class Board():
                 player.played[row].append(card)
 
         blocked_rows = set([row for weather_card in self.weather for row in weather_card.rows])
-        self.modify_cards(card.rows, lambda card, row: card.points)
-        self.modify_cards(list(blocked_rows), apply_weather)
-        self.modify_cards(card.rows, apply_bonuses)      
+        if -1 in card.rows:
+            self.modify_cards(list(range(3)), reset_points)
+            self.modify_cards(list(blocked_rows), apply_weather)
+            self.modify_cards(list(range(3)), apply_bonuses)    
+        else:
+            self.modify_cards(card.rows, reset_points)
+            self.modify_cards(list(blocked_rows), apply_weather)
+            self.modify_cards(card.rows, apply_bonuses)      

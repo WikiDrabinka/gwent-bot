@@ -3,9 +3,10 @@ import numpy as np
 
 class Agent():
 
-    def __init__(self, deck: list[Card]):
+    def __init__(self, deck: list[Card], name = "Default Agent"):
 
-        hand = list(np.random.choice(deck, size = 5, replace = False))
+        self.name = name
+        hand = list(np.random.choice(deck, size = 10, replace = False))
         used_deck = deck.copy()
         
         for card in hand:
@@ -33,6 +34,12 @@ class Agent():
                 for revived_card in self.player.cemetary:
 
                     actions.append((card, {"revived_card": revived_card}))
+
+            elif "horn" in card.powers:
+
+                for row in range(3):
+
+                    actions.append((card, {"row": row}))
             
             else:
 
@@ -63,9 +70,13 @@ class GameHandler():
 
             if kwargs:
 
+                print(f"[{agent.name}] played {next_action.name} for row {kwargs.get("row", next_action.rows[0])}")
+
                 self.board.play_card(agent.player, next_action, **kwargs)
 
             else:
+
+                print(f"[{agent.name}] played {next_action.name} for row {next_action.rows[0]}")
                 
                 self.board.play_card(agent.player, next_action)
 
