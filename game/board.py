@@ -1,4 +1,4 @@
-import random
+import numpy as np
 
 class Card():
 
@@ -13,17 +13,21 @@ class Card():
 
     def __repr__(self):
 
-        return f"Card '{self.name}'\nPoints: {self.points}, Powers: {self.powers}, Rows: {self.rows}"
+        return f"Card '{self.name}'"
     
     def __eq__(self, other):
 
         return self.name == other.name and self.points == other.points and set(self.rows) == set(other.rows) and set(self.powers) == set(other.powers)
+    
+    def __hash__(self):
+        
+        return hash((self.name, self.points, tuple(sorted(self.rows)), tuple(sorted(self.powers))))
 
 class Board():
 
     class Player():
 
-        def __init__(self, deck: list[Card], hand: list[Card], played: dict[int, list[Card]] = None, cemetary: list[Card] = []):
+        def __init__(self, deck: list[Card], hand: list[Card] = [], played: dict[int, list[Card]] = None, cemetary: list[Card] = []):
 
             self.hand = hand
             self.deck = deck
@@ -39,26 +43,39 @@ class Board():
             if len(self.deck) == 0:
                 return
             
-            new_card = random.choice(self.deck)
+            new_card = np.random.choice(self.deck)
 
             self.deck.remove(new_card)
             self.hand.append(new_card)
+
+        def shuffle_deck(self):
+
+            deck = self.deck + self.hand + self.cemetary + [card for row in self.played.values() for card in row]
+            self.played = {i: [] for i in range(3)}
+            self.cemetary = []
+            self.passed = False
+            self.hand = list(np.random.choice(deck, size = 10, replace = False))
+            used_deck = deck.copy()
+            
+            for card in self.hand:
+                used_deck.remove(card)
+
+            self.deck = used_deck
+
+        def get_score(self):
+
+            score = 0
+
+            for row in self.played:
+
+                score += sum([card.modified_points for card in self.played[row]])
+
+            return score
 
     def __init__(self, players: list[Player]):
 
         self.players = players
         self.weather = []
-
-    def get_score(self, player_id: int):
-
-        score = 0
-        player = self.players[player_id]
-
-        for row in player.played:
-
-            score += sum([card.modified_points for card in player.played[row]])
-
-        return score
     
     def remove_card(self, card: Card, dead: bool = True):
 
@@ -148,11 +165,13 @@ class Board():
 
             card_candidates = [candidate for player in self.players for row in rows for candidate in player.played[row] if "hero" not in candidate.powers]
 
-            max_points = max([card.modified_points for card in card_candidates])
-            max_cards = [card for card in card_candidates if card.modified_points == max_points]
+            if len(card_candidates) > 0:
 
-            for removed_card in max_cards:
-                self.remove_card(removed_card)
+                max_points = max([card.modified_points for card in card_candidates])
+                max_cards = [card for card in card_candidates if card.modified_points == max_points]
+
+                for removed_card in max_cards:
+                    self.remove_card(removed_card)
                         
         else:
 

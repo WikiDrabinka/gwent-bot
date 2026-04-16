@@ -6,13 +6,10 @@ class Agent():
     def __init__(self, deck: list[Card], name = "Default Agent"):
 
         self.name = name
-        hand = list(np.random.choice(deck, size = 10, replace = False))
-        used_deck = deck.copy()
-        
-        for card in hand:
-            used_deck.remove(card)
 
-        self.player = Board.Player(used_deck, hand)
+        self.deck = deck
+        self.player = Board.Player(deck)
+        self.player.shuffle_deck()
         self.pass_card = Card(name = "pass")
 
     def get_actions(self) -> list[tuple[Card, dict]]:
@@ -49,10 +46,10 @@ class Agent():
 
         return actions
 
-    def select_action(self, observation):
+    def select_action(self, observation: Board) -> tuple[Card, dict]:
         return max(self.get_actions(), key=lambda x: x[0].points)
 
-    def update(self, action, observation):
+    def update(self, action, observation: Board):
         pass
 
 class GameHandler():
@@ -61,26 +58,31 @@ class GameHandler():
 
         self.agents = agents
         self.board = Board([agent.player for agent in agents])
+        self.finished = [False] * len(agents)
 
     def step(self):
         
-        for agent in self.agents:
+        for idx, agent in enumerate(self.agents):
 
             next_action, kwargs = agent.select_action(self.board)
 
             if kwargs:
 
-                print(f"[{agent.name}] played {next_action.name} for row {kwargs.get("row", next_action.rows[0])}")
+                # print(f"[{agent.name}] played {next_action.name} for row {kwargs.get("row", next_action.rows[0])}")
 
                 self.board.play_card(agent.player, next_action, **kwargs)
 
             else:
 
-                print(f"[{agent.name}] played {next_action.name} for row {next_action.rows[0]}")
+                # print(f"[{agent.name}] played {next_action.name} for row {next_action.rows[0]}")
                 
                 self.board.play_card(agent.player, next_action)
 
             agent.update((next_action, kwargs), self.board)
+
+            if next_action.name == "pass":
+
+                self.finished[idx] = True
 
 
     
