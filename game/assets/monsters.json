@@ -1,0 +1,380 @@
+[
+    {
+        "name": "Arachas",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Arachas",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Arachas",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Arachas Behemoth",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Botchling",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Celaeno Harpy",
+        "points": 2,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Cockatrice",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Crone: Brewess",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Crone: Weavess",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Crone: Whispess",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Draug",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Earth Elemental",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Endrega",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Fiend",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Fire Elemental",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Foglet",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Forktail",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Frightener",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Gargoyle",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Ghoul",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Ghoul",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Ghoul",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Grave Hag",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Griffin",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Harpy",
+        "points": 2,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Ice Giant",
+        "points": 5,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Imlerith",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Kayran",
+        "points": 8,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": [
+            "hero",
+            "morale boost"
+        ]
+    },
+    {
+        "name": "Leshen",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Nekker",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Nekker",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Nekker",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Plague Maiden",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Toad",
+        "points": 7,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "scorch"
+        ]
+    },
+    {
+        "name": "Vampire: Bruxa",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Vampire: Ekimmara",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Vampire: Fleder",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Vampire: Garkain",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Vampire: Katakan",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Werewolf",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Wyvern",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    }
+]

@@ -1,0 +1,336 @@
+[
+    {
+        "name": "Albrich",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Assire var Anahid",
+        "points": 6,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Black Infantry Archer",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Black Infantry Archer",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Cahir Mawr Dyffryn aep Ceallach",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Cynthia",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Etolian Auxiliary Archers",
+        "points": 1,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Etolian Auxiliary Archers",
+        "points": 1,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Fringilla Vigo",
+        "points": 6,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Heavy Zerrikanian Fire Scorpion",
+        "points": 10,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Impera Brigade Guard",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Impera Brigade Guard",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Impera Brigade Guard",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Impera Brigade Guard",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Letho of Gulet",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Menno Coehoorn",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Morteisen",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Morvran Voorhis",
+        "points": 10,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Nausicaa Cavalry Rider",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Nausicaa Cavalry Rider",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Nausicaa Cavalry Rider",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Puttkammer",
+        "points": 3,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Rainfarn",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Renuald aep Matsen",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Rotten Mangonel",
+        "points": 3,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Shilard Fitz-Oesterlen",
+        "points": 7,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "spy"
+        ]
+    },
+    {
+        "name": "Siege Engineer",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Siege Technician",
+        "points": 0,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Stefan Skellen",
+        "points": 9,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "spy"
+        ]
+    },
+    {
+        "name": "Sweers",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Tibor Eggebracht",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Vanhemar",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Vattier de Rideaux",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "spy"
+        ]
+    },
+    {
+        "name": "Vreemde",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Young Emissary",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Young Emissary",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Zerrikanian Fire Scorpion",
+        "points": 5,
+        "rows": [
+            2
+        ],
+        "powers": []
+    }
+]

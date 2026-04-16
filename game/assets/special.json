@@ -1,0 +1,117 @@
+[
+    {
+        "name": "Biting Frost",
+        "rows": [
+            0
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Biting Frost",
+        "rows": [
+            0
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Biting Frost",
+        "rows": [
+            0
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Clear Weather",
+        "powers": ["clear"]
+    },
+    {
+        "name": "Clear Weather",
+        "powers": ["clear"]
+    },
+    {
+        "name": "Clear Weather",
+        "powers": ["clear"]
+    },
+    {
+        "name": "Commander's Horn",
+        "rows": [
+            -1
+        ],
+        "powers": ["horn"]
+    },
+    {
+        "name": "Commander's Horn",
+        "rows": [
+            -1
+        ],
+        "powers": ["horn"]
+    },
+    {
+        "name": "Commander's Horn",
+        "rows": [
+            -1
+        ],
+        "powers": ["horn"]
+    },
+    {
+        "name": "Commander's Horn",
+        "rows": [
+            -1
+        ],
+        "powers": ["horn"]
+    },
+    {
+        "name": "Biting Frost",
+        "rows": [
+            0
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Impenetrable Fog",
+        "rows": [
+            1
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Impenetrable Fog",
+        "rows": [
+            1
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Scorch",
+        "powers": ["scorch"]
+    },
+    {
+        "name": "Scorch",
+        "powers": ["scorch"]
+    },
+    {
+        "name": "Scorch",
+        "powers": ["scorch"]
+    },
+    {
+        "name": "Torrential Rain",
+        "rows": [
+            2
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Torrential Rain",
+        "rows": [
+            2
+        ],
+        "powers": ["weather"]
+    },
+    {
+        "name": "Torrential Rain",
+        "rows": [
+            2
+        ],
+        "powers": ["weather"]
+    }
+]

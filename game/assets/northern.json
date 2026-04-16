@@ -1,0 +1,308 @@
+[
+    {
+        "name": "Ballista",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Blue Stripes Commando",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Blue Stripes Commando",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Blue Stripes Commando",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Catapult",
+        "points": 8,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Catapult",
+        "points": 8,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Catapult",
+        "points": 8,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Crinfrid Reavers Dragon Hunter",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Crinfrid Reavers Dragon Hunter",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Crinfrid Reavers Dragon Hunter",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Dethmold",
+        "points": 6,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dun Banner Medic",
+        "points": 5,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Esterad Thyssen",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "John Natalis",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Kaedweni Siege Expert",
+        "points": 1,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "morale boost"
+        ]
+    },
+    {
+        "name": "Keira Metz",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Philippa Eilhart",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Poor Fucking Infantry",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Poor Fucking Infantry",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Poor Fucking Infantry",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "tight bond"
+        ]
+    },
+    {
+        "name": "Prince Stennis",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "spy"
+        ]
+    },
+    {
+        "name": "Redanian Foot Soldier",
+        "points": 1,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Sabrina Glevissig",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Sheldon Skaggs",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Siege Tower",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Siegfried of Denesle",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Sigismund Dijkstra",
+        "points": 4,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "spy"
+        ]
+    },
+    {
+        "name": "S\\u00edle de Tansarville",
+        "points": 5,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Thaler",
+        "points": 1,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "spy"
+        ]
+    },
+    {
+        "name": "Trebuchet",
+        "points": 6,
+        "rows": [
+            2
+        ],
+        "powers": []
+    },
+    {
+        "name": "Vernon Roche",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Ves",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Yarpen Zigrin",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": []
+    }
+]

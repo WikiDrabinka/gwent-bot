@@ -1,0 +1,414 @@
+[
+    {
+        "name": "Barclay Els",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Ciaran aep Easnillien",
+        "points": 3,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dennis Cranmer",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dol Blathanna Archer",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dol Blathanna Scout",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dol Blathanna Scout",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dol Blathanna Scout",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dol Blathanna Scout",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Dwarven Skirmisher",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Dwarven Skirmisher",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Dwarven Skirmisher",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Eithne",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Elven Skirmisher",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Elven Skirmisher",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Elven Skirmisher",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Filavandrel aen Fidhail",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Havekar Healer",
+        "points": 0,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Havekar Healer",
+        "points": 0,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Havekar Healer",
+        "points": 0,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Havekar Healer",
+        "points": 0,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Havekar Smuggler",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Havekar Smuggler",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Havekar Smuggler",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Havekar Smuggler",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Ida Emean aep Sivney",
+        "points": 6,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Iorveth",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Isengrim Faoiltiarna",
+        "points": 10,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "morale boost",
+            "hero"
+        ]
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Mahakaman Defender",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Milva",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "morale boost"
+        ]
+    },
+    {
+        "name": "Riordain",
+        "points": 1,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Saesenthessis",
+        "points": 10,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Schirru",
+        "points": 8,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "scorch"
+        ]
+    },
+    {
+        "name": "Toruviel",
+        "points": 2,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Vrihedd Brigade Recruit",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Vrihedd Brigade Veteran",
+        "points": 5,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Vrihedd Brigade Veteran",
+        "points": 5,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Vrihedd Brigade Veteran",
+        "points": 5,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    },
+    {
+        "name": "Yaevinn",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": []
+    }
+]

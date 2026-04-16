@@ -7,7 +7,7 @@ This project's goal is to create a few different Reinforcement Learning Agents f
 - [ ] Game functionality
     - [x] Basic cards and game
         - [x] Functionality
-        - [ ] Card information (JSON)
+        - [x] Card information (JSON)
     - [ ] Leader cards
     - [ ] Expansion pack abilities and cards
     - [ ] 3 Turn system

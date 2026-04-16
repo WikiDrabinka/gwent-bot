@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Cirilla Fiona Elen Riannon",
+        "points": 15,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Dandelion",
+        "points": 2,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "horn"
+        ]
+    },
+    {
+        "name": "Emiel Regis Rohellec Terzieff",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Gaunter O'Dimm",
+        "points": 2,
+        "rows": [
+            2
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Gaunter O'Dimm: Darkness",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Gaunter O'Dimm: Darkness",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Gaunter O'Dimm: Darkness",
+        "points": 4,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "muster"
+        ]
+    },
+    {
+        "name": "Geralt of Rivia",
+        "points": 15,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Mysterious Elf",
+        "points": 0,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "spy",
+            "hero"
+        ]
+    },
+    {
+        "name": "Olgierd von Everec",
+        "points": 6,
+        "rows": [
+            0,
+            1
+        ],
+        "powers": [
+            "morale boost"
+        ]
+    },
+    {
+        "name": "Roach",
+        "points": 3,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Triss Merigold",
+        "points": 7,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "hero"
+        ]
+    },
+    {
+        "name": "Vesemir",
+        "points": 6,
+        "rows": [
+            0
+        ],
+        "powers": []
+    },
+    {
+        "name": "Villentretenmerth",
+        "points": 7,
+        "rows": [
+            0
+        ],
+        "powers": [
+            "scorch"
+        ]
+    },
+    {
+        "name": "Yennefer of Vengerberg",
+        "points": 7,
+        "rows": [
+            1
+        ],
+        "powers": [
+            "medic"
+        ]
+    },
+    {
+        "name": "Zoltan Chivay",
+        "points": 5,
+        "rows": [
+            0
+        ],
+        "powers": []
+    }
+]
