@@ -27,7 +27,7 @@ class Board():
 
     class Player():
 
-        def __init__(self, deck: list[Card], hand: list[Card] = [], played: dict[int, list[Card]] = None, cemetary: list[Card] = []):
+        def __init__(self, deck: list[Card], hand: list[Card] = [], played: dict[int, list[Card]] = None, cemetary: list[Card] = [], lives: int = 2):
 
             self.hand = hand
             self.deck = deck
@@ -37,6 +37,8 @@ class Board():
                 self.played = {i: [] for i in range(3)}
             self.cemetary = cemetary
             self.passed = False
+            self.won = 0
+            self.lost = 0
 
         def draw_card(self):
             
@@ -61,6 +63,8 @@ class Board():
                 used_deck.remove(card)
 
             self.deck = used_deck
+            self.won = 0
+            self.lost = 0
 
         def get_score(self):
 
@@ -76,6 +80,14 @@ class Board():
 
         self.players = players
         self.weather = []
+
+    def clear_weather(self):
+
+        for card, player in self.weather:
+
+            player.cemetary.append(card)
+
+        self.weather.clear()
     
     def remove_card(self, card: Card, dead: bool = True):
 
@@ -151,13 +163,13 @@ class Board():
 
         if "weather" in card.powers:
 
-            self.weather.append(card)
+            self.weather.append((card, player))
 
             self.modify_cards(card.rows, apply_weather)
 
         elif "clear" in card.powers:
 
-            self.weather.clear()
+            self.clear_weather()
         
         elif "scorch" in card.powers:
 
@@ -217,7 +229,7 @@ class Board():
                 
                 player.played[row].append(card)
 
-        blocked_rows = set([row for weather_card in self.weather for row in weather_card.rows])
+        blocked_rows = set([row for weather_card, player in self.weather for row in weather_card.rows])
         if -1 in card.rows:
             self.modify_cards(list(range(3)), reset_points)
             self.modify_cards(list(blocked_rows), apply_weather)

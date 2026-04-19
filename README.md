@@ -10,7 +10,7 @@ This project's goal is to create a few different Reinforcement Learning Agents f
         - [x] Card information (JSON)
     - [ ] Leader cards
     - [ ] Expansion pack abilities and cards
-    - [ ] 3 Turn system
+    - [x] 3 Turn system
 - [ ] Agents
     - [x] Baseline naive algorithm
     - [x] Q-Learning Agent with approximated state values

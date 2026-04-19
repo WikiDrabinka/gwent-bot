@@ -47,6 +47,10 @@ class Agent():
         return actions
 
     def select_action(self, observation: Board) -> tuple[Card, dict]:
+
+        if np.random.random() < 0.5:
+            return self.get_actions()[-1]
+
         return max(self.get_actions(), key=lambda x: x[0].points)
 
     def update(self, action, observation: Board):
@@ -84,6 +88,39 @@ class GameHandler():
 
                 self.finished[idx] = True
 
+    def game(self):
 
-    
+        for agent in self.agents:
 
+            agent.player.shuffle_deck()
+
+        while all([agent.player.lost < 2 for agent in self.agents]):
+
+            self.finished = [False] * len(self.agents)
+
+            self.board.clear_weather()
+
+            while not all(self.finished):
+
+                self.step()
+
+            scores = [agent.player.get_score() for agent in self.agents]
+            max_score = max(scores)
+
+            if scores.count(max_score) > 1:
+
+                for agent in self.agents:
+
+                    agent.player.lost += 1
+            
+            else:
+
+                for agent in self.agents:
+
+                    if agent.player.get_score() == max_score:
+
+                        agent.player.won += 1
+                    
+                    else:
+
+                        agent.player.lost += 1

@@ -29,7 +29,7 @@ class QLearningAgent(Agent):
                 else:
                     state.append("1")
 
-        if sum([self.player.get_score() - player.get_score for player in observation.players]) > 0:
+        if sum([self.player.get_score() - player.get_score() for player in observation.players]) > 0:
             state.append("1")
         else:
             state.append("0")
@@ -65,7 +65,9 @@ class QLearningAgent(Agent):
         a = action_hashable
         next_s = self.get_state(observation)
 
-        r = sum([self.player.get_score() - player.get_score() for player in observation.players])
+        current_score = sum([self.player.get_score() - player.get_score() for player in observation.players])
+
+        r = self.player.won - self.player.lost + (current_score > 0)*0.5
 
         self.action = a
         if s not in self.q_values:
