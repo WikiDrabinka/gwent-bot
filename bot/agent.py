@@ -30,7 +30,9 @@ class Agent():
 
                 for revived_card in self.player.cemetary:
 
-                    actions.append((card, {"revived_card": revived_card}))
+                    if -1 not in revived_card.rows:
+
+                        actions.append((card, {"revived_card": revived_card}))
 
             elif "horn" in card.powers:
 
@@ -48,8 +50,8 @@ class Agent():
 
     def select_action(self, observation: Board) -> tuple[Card, dict]:
 
-        if np.random.random() < 0.5:
-            return self.get_actions()[-1]
+        # if np.random.random() < 0.5:
+        #     return self.get_actions()[-1]
 
         return max(self.get_actions(), key=lambda x: x[0].points)
 
@@ -83,6 +85,7 @@ class GameHandler():
                 self.board.play_card(agent.player, next_action)
 
             agent.update((next_action, kwargs), self.board)
+            print(f"{agent.name} score: {agent.player.get_score()}")
 
             if next_action.name == "pass":
 
@@ -97,6 +100,10 @@ class GameHandler():
         while all([agent.player.lost < 2 for agent in self.agents]):
 
             self.finished = [False] * len(self.agents)
+
+            for agent in self.agents:
+
+                agent.player.clear_played()
 
             self.board.clear_weather()
 

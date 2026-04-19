@@ -50,6 +50,16 @@ class Board():
             self.deck.remove(new_card)
             self.hand.append(new_card)
 
+        def clear_played(self):
+            
+            for row in self.played:
+
+                for card in self.played[row]:
+
+                    self.cemetary.append(card)
+                
+                self.played[row] = []
+
         def shuffle_deck(self):
 
             deck = self.deck + self.hand + self.cemetary + [card for row in self.played.values() for card in row]
@@ -170,6 +180,8 @@ class Board():
         elif "clear" in card.powers:
 
             self.clear_weather()
+
+            player.cemetary.append(card)
         
         elif "scorch" in card.powers:
 
